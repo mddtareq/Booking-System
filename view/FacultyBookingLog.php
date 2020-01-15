@@ -44,7 +44,7 @@ if(!isset($_SESSION['userid']))
         $pageno = 1;
     }
 
-    $no_of_records_per_page = 5;
+    $no_of_records_per_page = 3;
     $offset = ($pageno-1) * $no_of_records_per_page;
 
     $total_pages_sql = "SELECT COUNT(*) FROM booking";

@@ -489,7 +489,7 @@ function getAllBookingDetailsPaginationModel($offset, $no_of_records_per_page){
     return $bookList;
 }
 function getFacultyBookingDetailsPaginationModel($addedby,$offset, $no_of_records_per_page){
-    $sql= "select * from booking WHERE addedby='$addedby'"; 
+    $sql= "select * from booking WHERE addedby='$addedby' LIMIT $offset, $no_of_records_per_page"; 
 
     $result = execute($sql);
 
