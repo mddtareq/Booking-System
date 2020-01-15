@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CBC</title>
+<center>
+	<h1>Classroom Booking System</h1>
+</center>
+<script type="text/javascript" src="../js/ValidateLogin.js"></script>
+<!--
+<center><noscript>Your browser does not support JavaScript!</noscript></center>
+-->
+<noscript>
+	<META HTTP-EQUIV="Refresh" CONTENT="0;URL=NoJs.html">
+</noscript>
+
+</head>
+<body>
+	<center><h2>Account Login</h2></center>
+	<center>
+<form action="../controller/Login.php" method="POST" onsubmit="return LoginCheck()"
+ >
+  
+  <input id="id" type="text" name="id" placeholder="ID" >
+  <br><span id="idspan"></span><br></br>
+  
+  <input id="password" type="password" name="password" placeholder="PASSWORD" >
+  <br><span id="passwordspan"></span><br></br>
+  <button type="submit" value="submit">Sign In</button>
+  
+  <br>
+</form> 
+<h3>Create an account!</h3>
+<form action="Registration.php">
+		<button >Sign Up</button>
+	</form></center>
+</body>
+</html>
