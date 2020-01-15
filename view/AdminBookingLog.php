@@ -55,7 +55,7 @@ if(!isset($_SESSION['userid']))
     $total_rows = mysqli_fetch_array($result)[0];
     $total_pages = ceil($total_rows / $no_of_records_per_page);
 
-    //$statement= getAllBookingDetailsPagination($offset, $no_of_records_per_page);
+
     $statement="select * from booking LIMIT $offset, $no_of_records_per_page";
     $res_data = mysqli_query($conn, $statement);
 
@@ -111,14 +111,14 @@ if(!isset($_SESSION['userid']))
             <div >
                 <nav >
                     
-                        <li ><a  href="?pageno=1">First</a></li>
-                        <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
-                            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
-                        </li>
-                        <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-                            <a  href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
-                        </li>
-                        <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+                        <button><a  href="?pageno=1">First</a></button>
+                        <a class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+                           <button> <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a></button>
+                        </a>
+                        <a class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+                           <button> <a  href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a></button>
+                        </a>
+                        <button><a href="?pageno=<?php echo $total_pages; ?>">Last</a></button>
                     
                 </nav>
             </div>
