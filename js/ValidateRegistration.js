@@ -193,7 +193,6 @@ function validateRegistrationForm()
     }else{ 
         if(userRepassword.value!==userPassword.value)
         {
-        console.log(userRepassword.value);
         document.getElementById("rePasswordSpan").innerText = "Password Missmatch";
         validRepassword =false;
         }
